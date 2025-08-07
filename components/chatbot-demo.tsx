@@ -152,8 +152,9 @@ export function Chatbot() {
                   animationSpeed={5}
                   containerClassName="bg-transparent opacity-30 dark:opacity-50"
                   colors={[
-                    [245, 5, 55],
-                    [245, 5, 55],
+                    [4, 4, 94],       // #04045E - dark blue
+                    [2, 62, 137],     // #023E89 - medium blue
+                    [62, 132, 198],   // #3E84C6 - light blue
                   ]}
                   opacities={[1, 0.8, 1, 0.8, 0.5, 0.8, 1, 0.5, 1, 3]}
                   dotSize={2}
@@ -167,33 +168,33 @@ export function Chatbot() {
                 <div className="relative flex h-full w-full justify-center text-center">
                   <h1 className="flex select-none py-2 text-center text-2xl font-extrabold leading-none tracking-tight md:text-2xl lg:text-4xl">
                     <span
-                      data-content="AI."
+                      data-content="ROO AI"
                       className="before:animate-gradient-background-1 relative before:absolute before:bottom-4 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] sm:before:top-0"
                     >
                       <span className="from-gradient-1-start to-gradient-1-end animate-gradient-foreground-1 bg-gradient-to-r bg-clip-text px-2 text-transparent">
-                        AI.
+                        ROO AI
                       </span>
                     </span>
                     <span
-                      data-content="Chat."
+                      data-content="Startup-Idea"
                       className="before:animate-gradient-background-2 relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] sm:before:top-0"
                     >
                       <span className="from-gradient-2-start to-gradient-2-end animate-gradient-foreground-2 bg-gradient-to-r bg-clip-text px-2 text-transparent">
-                        Chat.
+                        Startup-Idea
                       </span>
                     </span>
                     <span
-                      data-content="Experience."
+                      data-content="Evaluator"
                       className="before:animate-gradient-background-3 relative before:absolute before:bottom-1 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] sm:before:top-0"
                     >
                       <span className="from-gradient-3-start to-gradient-3-end animate-gradient-foreground-3 bg-gradient-to-r bg-clip-text px-2 text-transparent">
-                        Experience.
+                        Evaluator
                       </span>
                     </span>
                   </h1>
                 </div>
                 <p className="md:text-md lg:text-md mx-auto mt-1 text-center text-xs text-primary/60 md:max-w-2xl">
-                  How can I help you today?
+                  Test your idea
                 </p>
               </div>
               <div id="chat" className="h-38 w-full">
