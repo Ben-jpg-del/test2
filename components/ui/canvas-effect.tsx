@@ -24,6 +24,7 @@ export const CanvasRevealEffect = ({
   showGradient?: boolean;
 }) => {
   return (
+    // Removed h-screen w-screen here, relying on parent's fixed inset-0
     <div className={cn("relative h-full w-full bg-white", containerClassName)}>
       <div className="h-full w-full">
         <DotMatrix
