@@ -135,10 +135,9 @@ export function Chatbot() {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      // Removed mx-auto and added min-h-screen to span full height and width
-      className="relative w-full min-h-screen items-center justify-center overflow-hidden"
+      className="relative w-full min-h-screen overflow-hidden"
     >
-      <div className="relative flex h-full w-full items-center justify-center p-4">
+      <div className="relative flex flex-col min-h-screen w-full p-4"> {/* Changed h-full to min-h-screen */}
         <AnimatePresence>
           <div className="tracking-tightest flex select-none flex-col py-2 text-center text-3xl font-extrabold leading-none md:flex-col md:text-8xl lg:flex-row"></div>
           {hovered && (
@@ -162,8 +161,8 @@ export function Chatbot() {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className="z-20 w-full">
-          <ScrollArea className="h-[360px] w-full overflow-auto p-1">
+        <div className="z-20 w-full flex flex-col flex-grow">
+          <ScrollArea className="w-full overflow-auto p-1 flex-grow">
             <div className="px-6">
               <div className="relative flex h-full w-full justify-center text-center">
                 <h1 className="flex select-none py-2 text-center text-2xl font-extrabold leading-none tracking-tight md:text-2xl lg:text-4xl">
@@ -197,7 +196,7 @@ export function Chatbot() {
                 Test your idea
               </p>
             </div>
-            <div id="chat" className="h-38 w-full">
+            <div id="chat" className="w-full">
               <div className="">
                 <div className={cn("pt-4")}>
                   <div className="space-y-2 overflow-hidden p-2">
