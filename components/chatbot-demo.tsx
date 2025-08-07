@@ -132,124 +132,123 @@ export function Chatbot() {
   };
 
   return (
-    <div className="">
-      <div
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        className="relative mx-auto w-full items-center justify-center overflow-hidden"
-      >
-        <div className="relative flex w-full items-center justify-center p-4">
-          <AnimatePresence>
-            <div className="tracking-tightest flex select-none flex-col py-2 text-center text-3xl font-extrabold leading-none md:flex-col md:text-8xl lg:flex-row"></div>
-            {hovered && (
-              <motion.div
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 1 }}
-                className="absolute inset-0 h-full w-full object-cover"
-              >
-                <CanvasRevealEffect
-                  animationSpeed={5}
-                  containerClassName="bg-transparent opacity-30 dark:opacity-50"
-                  colors={[
-                    [4, 4, 94],       // #04045E - dark blue
-                    [2, 62, 137],     // #023E89 - medium blue
-                    [62, 132, 198],   // #3E84C6 - light blue
-                  ]}
-                  opacities={[1, 0.8, 1, 0.8, 0.5, 0.8, 1, 0.5, 1, 3]}
-                  dotSize={2}
-                />
-              </motion.div>
-            )}
-          </AnimatePresence>
-          <div className="z-20 w-full">
-            <ScrollArea className="h-[360px] w-full overflow-auto p-1">
-              <div className="px-6">
-                <div className="relative flex h-full w-full justify-center text-center">
-                  <h1 className="flex select-none py-2 text-center text-2xl font-extrabold leading-none tracking-tight md:text-2xl lg:text-4xl">
-                    <span
-                      data-content="ROO AI"
-                      className="before:animate-gradient-background-1 relative before:absolute before:bottom-4 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] sm:before:top-0"
-                    >
-                      <span className="from-gradient-1-start to-gradient-1-end animate-gradient-foreground-1 bg-gradient-to-r bg-clip-text px-2 text-transparent">
-                        ROO AI
-                      </span>
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      // Removed mx-auto and added min-h-screen to span full height and width
+      className="relative w-full min-h-screen items-center justify-center overflow-hidden"
+    >
+      <div className="relative flex h-full w-full items-center justify-center p-4">
+        <AnimatePresence>
+          <div className="tracking-tightest flex select-none flex-col py-2 text-center text-3xl font-extrabold leading-none md:flex-col md:text-8xl lg:flex-row"></div>
+          {hovered && (
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 1 }}
+              className="absolute inset-0 h-full w-full object-cover"
+            >
+              <CanvasRevealEffect
+                animationSpeed={5}
+                containerClassName="bg-transparent opacity-30 dark:opacity-50"
+                colors={[
+                  [4, 4, 94],       // #04045E - dark blue
+                  [2, 62, 137],     // #023E89 - medium blue
+                  [62, 132, 198],   // #3E84C6 - light blue
+                ]}
+                opacities={[1, 0.8, 1, 0.8, 0.5, 0.8, 1, 0.5, 1, 3]}
+                dotSize={2}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <div className="z-20 w-full">
+          <ScrollArea className="h-[360px] w-full overflow-auto p-1">
+            <div className="px-6">
+              <div className="relative flex h-full w-full justify-center text-center">
+                <h1 className="flex select-none py-2 text-center text-2xl font-extrabold leading-none tracking-tight md:text-2xl lg:text-4xl">
+                  <span
+                    data-content="ROO AI"
+                    className="before:animate-gradient-background-1 relative before:absolute before:bottom-4 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] sm:before:top-0"
+                  >
+                    <span className="from-gradient-1-start to-gradient-1-end animate-gradient-foreground-1 bg-gradient-to-r bg-clip-text px-2 text-transparent">
+                      ROO AI
                     </span>
-                    <span
-                      data-content="Startup-Idea"
-                      className="before:animate-gradient-background-2 relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] sm:before:top-0"
-                    >
-                      <span className="from-gradient-2-start to-gradient-2-end animate-gradient-foreground-2 bg-gradient-to-r bg-clip-text px-2 text-transparent">
-                        Startup-Idea
-                      </span>
+                  </span>
+                  <span
+                    data-content="Startup-Idea"
+                    className="before:animate-gradient-background-2 relative before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] sm:before:top-0"
+                  >
+                    <span className="from-gradient-2-start to-gradient-2-end animate-gradient-foreground-2 bg-gradient-to-r bg-clip-text px-2 text-transparent">
+                      Startup-Idea
                     </span>
-                    <span
-                      data-content="Evaluator"
-                      className="before:animate-gradient-background-3 relative before:absolute before:bottom-1 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] sm:before:top-0"
-                    >
-                      <span className="from-gradient-3-start to-gradient-3-end animate-gradient-foreground-3 bg-gradient-to-r bg-clip-text px-2 text-transparent">
-                        Evaluator
-                      </span>
+                  </span>
+                  <span
+                    data-content="Evaluator"
+                    className="before:animate-gradient-background-3 relative before:absolute before:bottom-1 before:left-0 before:top-0 before:z-0 before:w-full before:px-2 before:content-[attr(data-content)] sm:before:top-0"
+                  >
+                    <span className="from-gradient-3-start to-gradient-3-end animate-gradient-foreground-3 bg-gradient-to-r bg-clip-text px-2 text-transparent">
+                      Evaluator
                     </span>
-                  </h1>
-                </div>
-                <p className="md:text-md lg:text-md mx-auto mt-1 text-center text-xs text-primary/60 md:max-w-2xl">
-                  Test your idea
-                </p>
+                  </span>
+                </h1>
               </div>
-              <div id="chat" className="h-38 w-full">
-                <div className="">
-                  <div className={cn("pt-4")}>
-                    <div className="space-y-2 overflow-hidden p-2">
-                      {messages.map((msg, index) => (
-                        <div key={index} className={cn("p-2 rounded-lg", msg.role === "user" ? "bg-primary text-primary-foreground ml-auto max-w-[80%]" : "bg-muted max-w-[80%]")}>
-                          <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
-                        </div>
-                      ))}
-                    </div>
+              <p className="md:text-md lg:text-md mx-auto mt-1 text-center text-xs text-primary/60 md:max-w-2xl">
+                Test your idea
+              </p>
+            </div>
+            <div id="chat" className="h-38 w-full">
+              <div className="">
+                <div className={cn("pt-4")}>
+                  <div className="space-y-2 overflow-hidden p-2">
+                    {messages.map((msg, index) => (
+                      <div key={index} className={cn("p-2 rounded-lg", msg.role === "user" ? "bg-primary text-primary-foreground ml-auto max-w-[80%]" : "bg-muted max-w-[80%]")}>
+                        <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            </ScrollArea>
-            <div className="relative mt-2 w-full">
-              <form onSubmit={handleSubmit}>
-                <div className="">
-                  <Input
-                    className="pl-12"
-                    placeholder="Describe your startup idea…"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    disabled={isProcessing}
-                  />
-                </div>
-              </form>
-              <Button
-                variant="default"
-                size="icon"
-                className="absolute left-1.5 top-1.5 h-7 rounded-sm"
-                onClick={handleNewChat}
-                disabled={isProcessing}
-              >
-                <Plus className="h-5 w-5" />
-                <span className="sr-only">New Chat</span>
-              </Button>
-              <Button
-                type="submit"
-                variant="default"
-                size="icon"
-                className="absolute right-1.5 top-1.5 h-7 rounded-sm"
-                onClick={handleSubmit}
-                disabled={isProcessing || !message.trim()}
-              >
-                <Send className="mx-1 h-4 w-4" />
-              </Button>
             </div>
-            {status && (
-              <div className="mt-2 text-center text-sm text-muted-foreground">
-                {status}
+          </ScrollArea>
+          <div className="relative mt-2 w-full">
+            <form onSubmit={handleSubmit}>
+              <div className="">
+                <Input
+                  className="pl-12"
+                  placeholder="Describe your startup idea…"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  disabled={isProcessing}
+                />
               </div>
-            )}
+            </form>
+            <Button
+              variant="default"
+              size="icon"
+              className="absolute left-1.5 top-1.5 h-7 rounded-sm"
+              onClick={handleNewChat}
+              disabled={isProcessing}
+            >
+              <Plus className="h-5 w-5" />
+              <span className="sr-only">New Chat</span>
+            </Button>
+            <Button
+              type="submit"
+              variant="default"
+              size="icon"
+              className="absolute right-1.5 top-1.5 h-7 rounded-sm"
+              onClick={handleSubmit}
+              disabled={isProcessing || !message.trim()}
+            >
+              <Send className="mx-1 h-4 w-4" />
+            </Button>
           </div>
+          {status && (
+            <div className="mt-2 text-center text-sm text-muted-foreground">
+              {status}
+            </div>
+          )}
         </div>
       </div>
     </div>
